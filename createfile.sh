@@ -4,7 +4,7 @@ filepath=$(pwd)
 KUBE_VERSION=v1.11.2
 KUBE_PAUSE_VERSION=3.1
 ETCD_VERSION=3.2.18
-DNS_VERSION=1.1.3
+DNS_VERSION=1.14.8
 
 #url
 k8s=k8s.gcr.io
