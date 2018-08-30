@@ -48,11 +48,20 @@ done
 
 #create  pausedir
 cd $filepath
-  mkdir -p pause-amd64 && cd pause-amd64
+  mkdir -p pause && cd pause
   cat >Dockerfile<<EOF
-FROM $k8s/pause-amd64:$KUBE_PAUSE_VERSION
+FROM $k8s/pause:$KUBE_PAUSE_VERSION
 MAINTAINER  chengzhihui007
 EOF
+
+
+#create corednsdir
+cd $filepath
+  mkdir -p coredns && cd  coredns
+  cat >Dockerfile<<EOF
+FROM $k8s/coredns:1.1.3
+MAINTAINER chengzhihui007
+EOF 
 
 
 #create  flanneldir
