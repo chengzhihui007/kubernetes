@@ -14,6 +14,8 @@ k8s-dns-dnsmasq-nanny-amd64:${DNS_VERSION}
 k8s-dns-sidecar-amd64:${DNS_VERSION}
 k8s-dns-kube-dns-amd64:${DNS_VERSION}
 pause-amd64:${KUBE_PAUSE_VERSION}
+pause:${KUBE_PAUSE_VERSION}
+coredns:1.1.3
 coreos-flannel:${FLANNEL_VERSION})
 for image in ${images[@]}
 do
